@@ -1,0 +1,1 @@
+5. ml-auto to ms-auto (Align to right on navBar)
