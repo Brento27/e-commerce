@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Brento27/e-commerce#readme",
   "dependencies": {
     "concurrently": "^7.2.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   }

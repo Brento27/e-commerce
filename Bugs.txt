@@ -39,4 +39,4 @@ module.exports = function(app) {
 
 
 
-Servers {run npm start in root for backend and npm start in frontend}
+Servers {run npm start in root for backend and npm start in frontend}, OR {npm run dev, in root folder}
