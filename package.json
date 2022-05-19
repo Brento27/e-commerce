@@ -4,7 +4,7 @@
   "description": "MERN Shopping cart app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Brento27/e-commerce/issues"
   },
-  "homepage": "https://github.com/Brento27/e-commerce#readme"
+  "homepage": "https://github.com/Brento27/e-commerce#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
