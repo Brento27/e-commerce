@@ -18,7 +18,6 @@ const App = () => {
     </main>
     <Footer/>
   </Router>
-    
   )
 }
 
