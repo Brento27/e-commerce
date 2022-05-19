@@ -1,0 +1,19 @@
+{
+  "name": "price-city",
+  "version": "1.0.0",
+  "description": "MERN Shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brento27/e-commerce.git"
+  },
+  "author": "Brent Lombaard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brento27/e-commerce/issues"
+  },
+  "homepage": "https://github.com/Brento27/e-commerce#readme"
+}
