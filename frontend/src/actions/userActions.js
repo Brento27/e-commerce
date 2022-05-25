@@ -2,6 +2,7 @@ import axios from "axios";
 import {
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCES,
+  USER_LOGIN_FAIL,
 } from "../constants/userConstants";
 
 export const login = (email, password) => async (dispatch) => {
