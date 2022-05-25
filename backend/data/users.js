@@ -3,23 +3,23 @@ import bcrypt from 'bcryptjs'
 const users = [
     {
         name: 'Admin User',
-        email: 'admin@exapmle.com',
+        email: 'admin@example.com',
         password: bcrypt.hashSync('123456', 10),
         isAdmin: true
     },
     {
         name: 'John Doe',
-        email: 'john@exapmle.com',
+        email: 'john@example.com',
         password: bcrypt.hashSync('123456', 10)
     },
     {
         name: 'Jane Doe',
-        email: 'jane@exapmle.com',
+        email: 'jane@example.com',
         password: bcrypt.hashSync('123456', 10)
     },
     {
         name: 'Brent Lombaard',
-        email: 'brent@exapmle.com',
+        email: 'brent@example.com',
         password: bcrypt.hashSync('020223', 10)
     }
 ]
