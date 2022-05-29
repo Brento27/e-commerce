@@ -1,32 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  Row,
-  Col,
-  Image,
-  ListGroup,
-  Card,
-  Button,
-  ListGroupItem,
-  Form,
-} from "react-bootstrap";
-import Rating from "../components/Rating";
-import { listProductDetails } from "../actions/productActions";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
+import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap"
+import Rating from "../components/Rating"
+import { listProductDetails } from "../actions/productActions"
+import Loader from "../components/Loader"
+import Message from "../components/Message"
 
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(1)
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
-  const productDetails = useSelector((state) => state.productDetails);
-  const { loading, error, product } = productDetails;
+  const productDetails = useSelector((state) => state.productDetails)
+  const { loading, error, product } = productDetails
 
   useEffect(() => {
-    dispatch(listProductDetails(match.params.id));
-  }, [dispatch, match]);
+    dispatch(listProductDetails(match.params.id))
+  }, [dispatch, match])
 
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
@@ -96,7 +87,7 @@ const ProductScreen = ({ history, match }) => {
                           {[...Array(product.countInStock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>
                               {x + 1}
-                              </option>
+                            </option>
                           ))}
                         </Form.Control>
                       </Col>
@@ -120,7 +111,7 @@ const ProductScreen = ({ history, match }) => {
         </Row>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ProductScreen;
+export default ProductScreen
