@@ -76,7 +76,7 @@ const OrderScreen = ({ match, history }) => {
     <Loader />
   ) : error ? (
     <Message variant="danger">{error}</Message>
-  ) : (
+  ) : order.user._id === userInfo._id ? (
     <>
       <h1>Order {order._id}</h1>
       <Row>
@@ -200,6 +200,8 @@ const OrderScreen = ({ match, history }) => {
         </Col>
       </Row>
     </>
+  ) : (
+    <Message variant="danger">Not authorized to view this order</Message>
   )
 }
 
