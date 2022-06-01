@@ -76,7 +76,7 @@ const OrderScreen = ({ match, history }) => {
     <Loader />
   ) : error ? (
     <Message variant="danger">{error}</Message>
-  ) : order.user._id === userInfo._id ? (
+  ) : order.user._id === userInfo._id || userInfo.isAdmin ? (
     <>
       <h1>Order {order._id}</h1>
       <Row>
