@@ -1,7 +1,9 @@
 import React from "react"
+import { Route } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { LinkContainer } from "react-router-bootstrap"
 import { Navbar, Nav, Container, NavDropdown, Badge } from "react-bootstrap"
+import SearchBox from "./SearchBox"
 import { logout } from "../actions/userActions"
 
 const Header = () => {
@@ -26,11 +28,12 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <Route render={({ history }) => <SearchBox history={history} />} />
             <Nav className="ml-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
                   {cartItems.length > 0 && (
-                    <Badge pill bg="danger">
+                    <Badge pill bg="danger" className="bg-danger">
                       {cartItems.reduce((a, item) => a + item.qty, 0)}
                     </Badge>
                   )}{" "}
@@ -42,11 +45,9 @@ const Header = () => {
                   <LinkContainer to="/profile">
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to="/">
-                    <NavDropdown.Item onClick={logoutHandler}>
-                      Logout
-                    </NavDropdown.Item>
-                  </LinkContainer>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Logout
+                  </NavDropdown.Item>
                 </NavDropdown>
               ) : (
                 <LinkContainer to="/login">

@@ -1,7 +1,7 @@
 {
-  "name": "price-city",
+  "name": "proshop",
   "version": "1.0.0",
-  "description": "MERN Shopping cart app",
+  "description": "MERN shopping cart app",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -10,28 +10,24 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Brento27/e-commerce.git"
-  },
-  "author": "Brent Lombaard",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Brento27/e-commerce/issues"
-  },
-  "homepage": "https://github.com/Brento27/e-commerce#readme",
+  "author": "Brad Traversy",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
-    "concurrently": "^7.2.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "express-async-handler": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.3",
-    "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.16"
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
   }
 }
