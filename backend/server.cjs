@@ -3,13 +3,13 @@ import express from 'express'
 import dotenv from 'dotenv'
 import colors from 'colors'
 import morgan from 'morgan'
-import { notFound, errorHandler } from './middleware/errorMiddleware.js'
-import connectDB from './config/db.js'
+import { notFound, errorHandler } from './middleware/errorMiddleWare.cjs'
+import connectDB from './config/db.cjs'
 
-import productRoutes from './routes/productRoutes.js'
-import userRoutes from './routes/userRoutes.js'
-import orderRoutes from './routes/orderRoutes.js'
-import uploadRoutes from './routes/uploadRoutes.js'
+import productRoutes from './routes/productRoutes.cjs'
+import userRoutes from './routes/userRoutes.cjs'
+import orderRoutes from './routes/orderRoutes.cjs'
+import uploadRoutes from './routes/uploadRoutes.cjs'
 
 dotenv.config()
 

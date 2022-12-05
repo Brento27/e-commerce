@@ -5,7 +5,8 @@ module.exports = function(app) {
     "/api",
 
     createProxyMiddleware({
-      target: "http://localhost:5000",
+      // target: "http://localhost:5000",
+      target: "https://e-commerce-backend-beige.vercel.app/",
 
       changeOrigin: true,
     })
@@ -14,7 +15,8 @@ module.exports = function(app) {
     "/uploads",
 
     createProxyMiddleware({
-      target: "http://localhost:5000",
+      // target: "http://localhost:5000",
+      target: "https://e-commerce-backend-beige.vercel.app/",
 
       changeOrigin: true,
     })

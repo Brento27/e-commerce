@@ -9,8 +9,8 @@ import {
   deleteUser,
   getUserById,
   updateUser,
-} from '../controllers/userController.js'
-import { protect, admin } from '../middleware/authMiddleware.js'
+} from '../controllers/userController.cjs'
+import { protect, admin } from '../middleware/authMiddleware.cjs'
 
 router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/login', authUser)
